@@ -19,3 +19,4 @@ webencodings==0.5
 wrapt==1.12.1
 xlrd==1.2.0
 unittest-xml-reporting==2.0.0
+requests==2.27.1

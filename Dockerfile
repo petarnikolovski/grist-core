@@ -45,6 +45,7 @@ FROM node:14-buster-slim
 RUN \
   apt-get update && \
   apt-get install -y --no-install-recommends libexpat1 libsqlite3-0 && \
+  apt-get install -y libssl-dev openssl && \
   rm -rf /var/lib/apt/lists/*
 
 # Keep all storage user may want to persist in a distinct directory
