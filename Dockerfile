@@ -30,7 +30,13 @@ ADD sandbox/requirements.txt requirements.txt
 ADD sandbox/requirements3.txt requirements3.txt
 RUN \
   apt update && \
-  apt install -y --no-install-recommends python2 python-pip python-setuptools && \
+  apt install -y --no-install-recommends \
+    python2 python-pip python-setuptools \
+    libxml2-dev libxslt-dev python3-dev zlib1g-dev libffi-dev \
+    build-essential autoconf libtool pkg-config \
+    libqtgui4 libqtcore4 libqt4-xml \
+    libqt4-test libqt4-script libqt4-network libqt4-dbus \
+    python-qt4 python-qt4-gl libgle3 python-dev && \
   pip2 install -r requirements.txt && \
   pip3 install -r requirements3.txt
 
